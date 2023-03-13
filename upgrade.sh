@@ -1,25 +1,20 @@
 #
 #!/bin/bash
 
-function svn_co() {
-  rm -rf $(basename $1 .git)
-  svn co $1 $(basename $1 .git) || true
-  rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
-}
 
 
 # unraid icons
-svn_co https://github.com/xushier/HD-Icons/trunk/border-radius
+svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons
 # circle
-svn_co https://github.com/xushier/HD-Icons/trunk/circle
+svn co https://github.com/xushier/HD-Icons/trunk/circle icons
 # png
-svn_co https://github.com/walkxcode/dashboard-icons/trunk/png
+svn co https://github.com/walkxcode/dashboard-icons/trunk/png icons
 #svg
-svn_co https://github.com/walkxcode/dashboard-icons/trunk/svg
+svn co https://github.com/walkxcode/dashboard-icons/trunk/svg icons
 # 标题pic
-svn co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  标题图
+svn co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  title
 #动图
-svn co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection 动图
+svn co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection gif
 
 # clean
 rm -rf ./*/.svn*
