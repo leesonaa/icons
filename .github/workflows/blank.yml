@@ -33,7 +33,8 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           chmod +x ./upgrade.sh && ./upgrade.sh
-               
+          pwd
+          
       - name: Check for changes
         run: |
           if [ -n "$(git status -s | grep -v -w timestamp)" ];then
