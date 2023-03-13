@@ -1,8 +1,10 @@
 #
 #!/bin/bash
-
-
-
+####################################################################
+#   鸣谢：
+#          小迪同学 & walkxcode & iamsweet & dhruvinsh
+# 
+####################################################################
 # unraid icons
 svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons1
 # circle
