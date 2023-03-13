@@ -17,9 +17,9 @@ svn_co https://github.com/walkxcode/dashboard-icons/trunk/png
 #svg
 svn_co https://github.com/walkxcode/dashboard-icons/trunk/svg
 # 标题pic
-svn_co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  标题图
+svn_co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  /home/runner/work/icons/icons/标题图
 #动图
-svn_co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection ./动图
+svn_co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection /home/runner/work/icons/icons/动图
 
 # clean
 rm -rf ./*/.svn*
