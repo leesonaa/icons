@@ -4,17 +4,17 @@
 
 
 # unraid icons
-svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons
+svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons1
 # circle
-svn co https://github.com/xushier/HD-Icons/trunk/circle icons
+svn co https://github.com/xushier/HD-Icons/trunk/circle icons2
 # png
-svn co https://github.com/walkxcode/dashboard-icons/trunk/png icons
+svn co https://github.com/walkxcode/dashboard-icons/trunk/png icons3
 #svg
-svn co https://github.com/walkxcode/dashboard-icons/trunk/svg icons
+svn co https://github.com/walkxcode/dashboard-icons/trunk/svg icons4
 # 标题pic
-svn co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  title
+svn co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图  title1
 #动图
-svn co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection gif
+svn co https://github.com/dhruvinsh/unraid-icons/trunk/Orange-Collection gif1
 
 # clean
 rm -rf ./*/.svn*
