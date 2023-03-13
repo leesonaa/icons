@@ -16,7 +16,8 @@ svn_co https://github.com/xushier/HD-Icons/trunk/circle
 svn_co https://github.com/walkxcode/dashboard-icons/trunk/png
 #svg
 svn_co https://github.com/walkxcode/dashboard-icons/trunk/svg
-
+# 标题pic
+svn_co https://github.com/iamsweet/unraid_docker_icon/trunk/emby头图
 
 # clean
 rm -rf ./*/.svn*
