@@ -32,7 +32,7 @@ jobs:
       - name: Repo packages
         run: |
           cd $GITHUB_WORKSPACE
-          chmod +x ./upgrade.sh && ./upgrade.sh
+          chmod +x ./upgrade_git.sh && ./upgrade_git.sh
           pwd
           
       - name: Check for changes
