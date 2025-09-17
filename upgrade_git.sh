@@ -115,10 +115,10 @@ rm -rf unraid-icons-temp
 cd "$WORK_DIR"
 rm -rf "$TEMP_DIR"
 
-# clean - 清理可能存在的版本控制文件
+# clean - 清理下载目录中的版本控制文件（但保留根目录的.git）
 echo "清理版本控制文件..."
-find . -name ".git*" -type d -exec rm -rf {} + 2>/dev/null || true
-find . -name ".svn*" -type d -exec rm -rf {} + 2>/dev/null || true
+find ./icons1 ./icons2 ./icons3 ./icons4 ./title1 ./gif1 -name ".git*" -type d -exec rm -rf {} + 2>/dev/null || true
+find ./icons1 ./icons2 ./icons3 ./icons4 ./title1 ./gif1 -name ".svn*" -type d -exec rm -rf {} + 2>/dev/null || true
 
 # 验证最终结果
 echo "验证下载结果..."

@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@main
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Initialization environment
         run : |
@@ -37,17 +38,21 @@ jobs:
           
       - name: Check for changes
         run: |
-          if [ -n "$(git status -s | grep -v -w timestamp)" ];then
+          cd $GITHUB_WORKSPACE
+          git add .
+          if [ -n "$(git diff --cached --name-only)" ]; then
             echo "ischanges=true" >> $GITHUB_ENV
+            echo "发现文件变更"
           else
             echo "ischanges=false" >> $GITHUB_ENV
+            echo "没有文件变更"
           fi
       - name: Commit and Push
         if: env.ischanges == 'true'
         run: |
-          git add .
+          cd $GITHUB_WORKSPACE
           git commit -m "update $(date +%Y-%m-%d" "%H:%M:%S)"
-          git push -f
+          git push
       #- name: Delete workflow runs
       #  uses: Mattraks/delete-workflow-runs@v2
       #  with:
